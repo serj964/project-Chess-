@@ -1,4 +1,4 @@
---удалить все дебюты, которые когда-либо привели к поражению белых
+--СѓРґР°Р»РёС‚СЊ РІСЃРµ РґРµР±СЋС‚С‹, РєРѕС‚РѕСЂС‹Рµ РєРѕРіРґР°-Р»РёР±Рѕ РїСЂРёРІРµР»Рё Рє РїРѕСЂР°Р¶РµРЅРёСЋ Р±РµР»С‹С…
 DELETE FROM DEBUTS
 WHERE DEBUTS.debut_id in (SELECT distinct DEBUTS.debut_id 
                           FROM DEBUTS, PLAYER_GAME, GAMES
