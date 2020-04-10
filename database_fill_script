@@ -1,0 +1,929 @@
+INSERT INTO COLOUR VALUES('чёрный', 101);
+INSERT INTO COLOUR VALUES('белый', 102);
+
+INSERT INTO COUNTRIES (country,country_id) VALUES('Россия', 1);		   
+INSERT INTO COUNTRIES (country,country_id) VALUES('США', 2);			
+INSERT INTO COUNTRIES (country,country_id) VALUES('Латвия', 4);		   
+INSERT INTO COUNTRIES (country,country_id) VALUES('Германия', 5);		
+INSERT INTO COUNTRIES (country,country_id) VALUES('Великобритания', 6);
+INSERT INTO COUNTRIES (country,country_id) VALUES('Италия', 7);		   
+INSERT INTO COUNTRIES (country,country_id) VALUES('СССР', 8);			
+INSERT INTO COUNTRIES (country,country_id) VALUES('Австрия', 9);		
+INSERT INTO COUNTRIES (country,country_id) VALUES('Канада', 10);		
+INSERT INTO COUNTRIES (country,country_id) VALUES('Китай', 11);		   	
+INSERT INTO COUNTRIES (country,country_id) VALUES('Польша', 13);		
+INSERT INTO COUNTRIES (country,country_id) VALUES('Испания', 21);				
+INSERT INTO COUNTRIES (country,country_id) VALUES('Нидерланды', 25);	
+INSERT INTO COUNTRIES (country,country_id) VALUES('Украина', 28);			
+INSERT INTO COUNTRIES (country,country_id) VALUES('Норвегия', 32);		
+INSERT INTO COUNTRIES (country,country_id) VALUES('Армения', 34);	   
+INSERT INTO COUNTRIES (country,country_id) VALUES('Беларусь', 35);		
+INSERT INTO COUNTRIES (country,country_id) VALUES('Болгария', 36);		
+INSERT INTO COUNTRIES (country,country_id) VALUES('Бразилия', 37);		
+INSERT INTO COUNTRIES (country,country_id) VALUES('Куба', 40);			
+INSERT INTO COUNTRIES (country,country_id) VALUES('Финляндия', 43);	   
+INSERT INTO COUNTRIES (country,country_id) VALUES('Франция', 44);					
+INSERT INTO COUNTRIES (country,country_id) VALUES('Индия', 47);		   	   	
+
+INSERT INTO SYSTEMNAME VALUES('швейцарская', 121, 'Система проведения шахматного турнира, при которой турнир проходит без выбывания; в каждом туре, начиная со второго, пары соперников отбираются так, чтобы встречались между собой участники, набравшие равное количество очков.');
+INSERT INTO SYSTEMNAME VALUES('круговая', 122, 'Система проведения шахматного турнира, при которой каждый участник турнира играет с каждым в ходе тура или раунда. Считается наиболее справедливой, но при этом требует наибольшего числа игр для распределения мест, по сравнению с другими турнирными системами.');
+INSERT INTO SYSTEMNAME VALUES('нокаут-система', 123, 'Система проведения шахматного турнира, при которой в каждом туре участники играют не одну партию, а матч из нескольких партий с гарантированным неничейным результатом.');
+INSERT INTO SYSTEMNAME VALUES('схевенингенская', 124, 'Система проведения шахматного турнира, при которой каждый член одной группы участников играет со всеми членами другой группы. ');
+
+INSERT INTO DEBUTCLASSIFICATION VALUES('открытый', 131, 'Характеризуется начальным ходом белых 1.e2-e4 и ответом чёрных 1.e7-e5.')
+INSERT INTO DEBUTCLASSIFICATION VALUES('полуоткрытый', 132, 'Характеризуется начальным ходом белых 1.e2-e4 и ответом чёрных любым ходом кроме 1.e7-e5.');
+INSERT INTO DEBUTCLASSIFICATION VALUES('полузакрытый', 133, 'Характеризуется начальным ходом белых 1.d2-d4 и ответом черных любым ходом кроме 1.d7-d5.');
+INSERT INTO DEBUTCLASSIFICATION VALUES('закрытый', 134, 'Характеризуется начальным ходом белых 1.d2-d4 и ответом чёрных 1.d7-d5.');
+
+INSERT INTO TIMECONTROL (timecontrol,timecontrol_id,upper_timelimit) VALUES('пуля', 141, '00:02:59');
+INSERT INTO TIMECONTROL (timecontrol,timecontrol_id,lower_timelimit,upper_timelimit) VALUES('блиц', 142, '00:03:00', '00:09:59');
+INSERT INTO TIMECONTROL (timecontrol,timecontrol_id,lower_timelimit,upper_timelimit) VALUES('рапид', 143, '00:10:00', '00:59:59');
+INSERT INTO TIMECONTROL (timecontrol,timecontrol_id,lower_timelimit) VALUES('классические', 144, '01:00:00');
+
+INSERT INTO DEBUTS (debut,classification_id,debut_notation) VALUES('Венская партия', 131, '1.e4 e5 2.Nc3');							 --201
+INSERT INTO DEBUTS (debut,classification_id,debut_notation) VALUES('Дебют слона', 131, '1.e4 e5 2.Bc4');							 --202
+INSERT INTO DEBUTS (debut,classification_id,debut_notation) VALUES('Северный гамбит', 131, '1.e4 e5 2.d4 exd4 3.c3');				 --203
+INSERT INTO DEBUTS (debut,classification_id,debut_notation) VALUES('Центральный дебют', 131, '1.e4 e5 2.d4 exd4 3.Qxd4');			 --204
+INSERT INTO DEBUTS (debut,classification_id,debut_notation) VALUES('Дебют Алапина', 131, '1.e4 e5 2.Ne2');							 --205
+INSERT INTO DEBUTS (debut,classification_id,debut_notation) VALUES('Испанская партия', 131, '1.e4 e5 2.Nf3 Nc6 3.Bb5');				 --206
+INSERT INTO DEBUTS (debut,classification_id,debut_notation) VALUES('Дебют Понциани', 131, '1.e4 e5 2.Nf3 Nc6 3.c3');				 --207
+INSERT INTO DEBUTS (debut,classification_id,debut_notation) VALUES('Дебют четырёх коней',	131, '1.e4 e5 2.Nf3 Nc6 3.Nc3 Nf6');	 --208
+INSERT INTO DEBUTS (debut,classification_id,debut_notation) VALUES('Итальянская партия', 131, '1.e4 e5 2.Nf3 Nc6 3.Bc4');			 --209
+INSERT INTO DEBUTS (debut,classification_id,debut_notation) VALUES('Гамбит Эванса', 131, '1.e4 e5 2.Nf3 Nc6 3.Bc4 Bc5 4.b4');		 --210
+INSERT INTO DEBUTS (debut,classification_id,debut_notation) VALUES('Венгерская партия',	131, '1.e4 e5 2.Nf3 Nc6 3.Bc4 Be7');		 --211
+INSERT INTO DEBUTS (debut,classification_id,debut_notation) VALUES('Защита двух коней', 131, '1.e4 e5 2.Nf3 Nc6 3.Bc4 Nf6');		 --212
+INSERT INTO DEBUTS (debut,classification_id,debut_notation) VALUES('Шотландская партия', 131, '1.e4 e5 2.Nf3 Nc6 3.d4');			 --213
+INSERT INTO DEBUTS (debut,classification_id,debut_notation) VALUES('Дебют Константинопольского', 131, '1.e4 e5 2.Nf3 Nc6 3.g3');	 --214
+INSERT INTO DEBUTS (debut,classification_id,debut_notation) VALUES('Защита Филидора', 131, '1.e4 e5 2.Nf3 d6');						 --215
+INSERT INTO DEBUTS (debut,classification_id,debut_notation) VALUES('Латышский гамбит', 131, '1.e4 e5 2.Nf3 f5');					 --216
+INSERT INTO DEBUTS (debut,classification_id,debut_notation) VALUES('Защита Дамиано', 131, '1.e4 e5 2.Nf3 f6');						 --217
+INSERT INTO DEBUTS (debut,classification_id,debut_notation) VALUES('Русская партия ', 131, '1.e4 e5 2.Nf3 Nf6');					 --218
+INSERT INTO DEBUTS (debut,classification_id,debut_notation) VALUES('Защита Греко', 131, '1.e4 e5 2.Nf3 Qf6');						 --219
+INSERT INTO DEBUTS (debut,classification_id,debut_notation) VALUES('Королевский гамбит', 131, '1.e4 e5 2.f4');						 --220
+INSERT INTO DEBUTS (debut,classification_id,debut_notation) VALUES('Защита Святого Георгия', 132, '1.e4 a6');						 --221
+INSERT INTO DEBUTS (debut,classification_id,debut_notation) VALUES('Сицилианская защита', 132, '1.e4 c5');							 --222
+INSERT INTO DEBUTS (debut,classification_id,debut_notation) VALUES('Дебют Нимцовича', 132, '1.e4 Nc6');								 --223
+INSERT INTO DEBUTS (debut,classification_id,debut_notation) VALUES('Скандинавская защита', 132, '1.e4 d5');							 --224
+INSERT INTO DEBUTS (debut,classification_id,debut_notation) VALUES('Защита Пирца — Уфимцева', 132, '1.e4 d6 2.d4 Nf6 3.Nc3 g6');	 --225
+INSERT INTO DEBUTS (debut,classification_id,debut_notation) VALUES('Французская защита', 132, '1.e4 e6');							 --226
+INSERT INTO DEBUTS (debut,classification_id,debut_notation) VALUES('Защита Голдсмита', 132, '1.e4 h5');								 --227
+INSERT INTO DEBUTS (debut,classification_id,debut_notation) VALUES('Польская защита', 133, '1.d4 b5');								 --228
+INSERT INTO DEBUTS (debut,classification_id,debut_notation) VALUES('Волжский гамбит', 133, '1.d4 Nf6 2.c4 c5 3.d5 b5');				 --229
+INSERT INTO DEBUTS (debut,classification_id,debut_notation) VALUES('Защита Бенони', 133, '1.d4 c5');								 --230
+INSERT INTO DEBUTS (debut,classification_id,debut_notation) VALUES('Атака Тромповского', 133, '1.d4 Nf6 2.Bg5');					 --231
+INSERT INTO DEBUTS (debut,classification_id,debut_notation) VALUES('Гамбит Блюменфельда', 133, '1.d4 Nf6 2.c4 c5 3.d5 e6 4.Nf3 b5'); --232
+INSERT INTO DEBUTS (debut,classification_id,debut_notation) VALUES('Голландская защита', 133, '1.d4 f5');							 --233
+INSERT INTO DEBUTS (debut,classification_id,debut_notation) VALUES('Новоиндийская защита', 133, '1.d4 Nf6 2.c4 e6 3.Nf3 b6');		 --234
+INSERT INTO DEBUTS (debut,classification_id,debut_notation) VALUES('Ферзевый гамбит', 134, '1.d4 d5 2.c4');							 --235
+INSERT INTO DEBUTS (debut,classification_id,debut_notation) VALUES('Симметричная защита', 134, '1.d4 d5 2.c4 c5');					 --236
+INSERT INTO DEBUTS (debut,classification_id,debut_notation) VALUES('Славянская защита', 134, '1.d4 d5 2.c4 c6');					 --237
+INSERT INTO DEBUTS (debut,classification_id,debut_notation) VALUES('Защита Чигорина', 134, '1.d4 d5 2.c4 Nc6');						 --238
+INSERT INTO DEBUTS (debut,classification_id,debut_notation) VALUES('Контргамбит Альбина', 134, '1.d4 d5 2.c4 e5');					 --239
+INSERT INTO DEBUTS (debut,classification_id,debut_notation) VALUES('Система Колле', 134, '1.d4 d5 2.Nf3 Nf6 3.e3');					 --240
+INSERT INTO DEBUTS (debut,classification_id,debut_notation) VALUES('Лондонская система', 134, '1.d4 d5 2.Bf4');						 --241
+INSERT INTO DEBUTS (debut,classification_id,debut_notation) VALUES('Защита Тарраша', 134, '1.d4 d5 2.c4 e6 3.Nc3 c5');				 --242
+
+INSERT INTO MISTAKES (mistake,comment) VALUES('создание слабой пешки', 'Игрок либо продвигает пешки так глубоко на территорию противника, так что нет способа защитить их, либо наоборот создает слабые.');																																																																	  --275
+INSERT INTO MISTAKES (mistake) VALUES('забытая фигура');		--276																																																																																																			  --276
+INSERT INTO MISTAKES (mistake,comment) VALUES('пренебрежение связками', 'В игре нужно всегда избавляться от всех связок, даже если она не несёт прямой угрозы.');																																																																											  --277
+INSERT INTO MISTAKES (mistake,comment) VALUES('погоня за красотой', 'Иногда шахматист, добившись позиционного преимущества, вместо того, чтобы реально использовать его, увлекается случайной красивой комбинацией и тем упускает все свои шансы.');																																																						  --278
+INSERT INTO MISTAKES (mistake) VALUES('неожиданный шах');																																																																																																					  --279
+INSERT INTO MISTAKES (mistake) VALUES('разрушенная перегородка');																																																																																																			  --280
+INSERT INTO MISTAKES (mistake,comment) VALUES('смешение идей', 'Допустим, в данном положении можно избрать два различных плана игры. В этом случае нет ничего хуже, как пытаться проводить оба плана. Получается смешение идей, и ни один план не удается как следует выполнить.');																																															  --281
+INSERT INTO MISTAKES (mistake,comment) VALUES('исчезнувшее поле', 'Часто, чтобы хорошо обдумать комбинацию, нужно оторваться мыслью от того положения, которое стоит на доске и представить себе новое, воображаемое положение, которое получится после ряда ходов обоих противников. В этом случае положение, которое стоит на доске, не только не помогает, а наоборот мешает расчету. Иногда же оно настолько сбивает с толку, что весь расчет оказывается неправильным.');--282
+INSERT INTO MISTAKES (mistake,comment) VALUES('игнорирование пешек', 'Игрок думает, что пешки являются наименее ценным материалом среди шахматных фигур и не защищает их.');																																																																								  --283
+INSERT INTO MISTAKES (mistake,comment) VALUES('бесполезный ход ферзем', 'Позволяет сопернику развивать пешки, слонов или коней, получая темпы за счёт отступления ферзя. К тому же, сильный игрок в начале партии не уверен, где ферзь может понадобиться, так что он, как правило, ждет подходящего момента, чтобы ввести ферзя в игру.');																																	  --284
+
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Эйве', 'Макс', '20/05/1901', 25);			   --401
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Ботвинник', 'Михаил', '17/08/1911', 8);		   --
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Смыслов', 'Василий', '24/04/1921', 8);		   --403
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Таль', 'Михаил', '09/11/1936', 8);			   --
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Петросян', 'Тигран', '17/06/1929', 8);		   --405
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Спасский', 'Борис', '30/01/1937', 8);		   --
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Фишер', 'Роберт', '09/03/1943', 2);			   --407
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Карпов', 'Анатолий', '23/05/1951', 1);		   --
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Каспаров', 'Гарри', '13/04/1963', 1);		   --409
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Ананд', 'Вишванатан', '11/12/1969', 47);		   --
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Карлсен', 'Магнус', '30/11/1990', 32);		   --411
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Карякин', 'Сергей', '12/01/1990', 1);		   --
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Каруана', 'Фабиано', '30/07/1992', 2);		   --413
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Лижень', 'Дин', '19/11/1981', 11);			   --
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Топалов', 'Веселин', '10/05/1978', 36);		   --415
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Аронян', 'Левон', '06/04/1984', 34);			   --
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Гири', 'Аниш', '19/02/1984', 25);			   --417
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Иванчук', 'Василий', '07/08/1985', 28);		   --
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Рублевский', 'Сергей', '15/10/1974', 1);		   --
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Мотылев', 'Александр','17/06/1979', 1);		   --420
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Свидлер', 'Пётр', '15/06/1976', 1);			   --
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Степанов', 'Андрей', '15/06/2001', 1);		   --422
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Терехов', 'Максим', '20/07/2000', 1);		   --
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Зуденков', 'Сергей', '27/11/2000', 1);		   --424
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Филимонова', 'Александра', '12/07/2000', 1);	   --
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Со', 'Уэсли', '09/10/1993', 2);				   --426
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Уильямс', 'Роджер', '17/04/1974', 2);		   --
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Джонсон', 'Роберт', '12/12/1987', 2);		   --428
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Джонс', 'Эрнест', '26/02/1983', 2);			   --
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Робсон', 'Рэй', '25/10/1994', 2);			   --430
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Берзиньш', 'Роланд', '29/12/1991', 4);		   --
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Кракопс', 'Марис', '03/04/1978', 4);			   --432
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Янсонс', 'Юрис', '30/09/1992', 4);			   --
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Густафссон', 'Ян', '25/06/1979', 5);			   --434
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Фридман', 'Даниэль', '15/02/1976', 5);		   --
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Щульц', 'Мартин', '18/06/1977', 5);			   --436
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Аркелл', 'Кит', '21/11/1981', 6);			   --
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Оуэн', 'Джон', '16/04/1972', 6);				   --438
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Уэллс', 'Питер', '14/11/1986', 6);			   --
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Годена', 'Микеле', '30/03/1987', 7);			   --440
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Вокатуро', 'Даниеле', '17/08/1986', 7);		   --
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Арланди', 'Эннио', '18/06/1974', 7);			   --
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Киндерман', 'Штефан', '07/08/1973', 9);		   --443
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Раггер', 'Маркус', '12/05/1983', 9);			   --
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Джойнер', 'Лайонер', '09/11/1996', 10);		   --445
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Лесьеж', 'Александр', '11/02/1992', 10);		   --
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Чун', 'Лян', '01/01/1979', 11);				   --447
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Юйсян', 'Фан', '14/07/1990', 11);			   --
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Леви', 'Ежи', '07/12/1971', 13);				   --449
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Блем', 'Павел', '02/02/1990', 13);			   --
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Войткевич', 'Александр', '30/09/1983', 13);	   --451
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Соцко', 'Бартош', '15/07/1995', 13);			   --
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Ильескас', 'Мигель', '03/04/1977', 21);		   --
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Перес', 'Франсиско', '08/07/1991', 21);		   --
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Ван ден Босх', 'Йоханнес', '02/09/1989', 25);   --455
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Николич', 'Предраг', '05/10/1994', 25);		   --
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Гарин', 'Энрике', '01/01/1996', 25);			   --457
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Пономарев', 'Руслан', '17/09/1989', 28);		   --
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Эльянов', 'Павел', '24/01/1969', 28);		   --459
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Рубанраут', 'Серж', '23/11/1971', 34);          --460
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Флатов', 'Альфред', '07/06/1987', 34);		   --
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Жигалко', 'Сергей', '12/10/1991', 35);		   --462
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Ступак', 'Кирилл', '23/08/1986', 35);		   --
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Тетерев', 'Виталий', '07/09/1979', 35);		   --464
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Камара', 'Элдер', '11/01/1992', 37);			   --
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Винантс', 'Люк', '27/03/1995', 36);			   --466
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Рингуар', 'Танги', '19/11/1975', 36);		   --
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Ногейрас', 'Хесус', '28/05/1986', 40);		   --
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Вера', 'Рейнальдо', '05/06/1969', 40);		   --469
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Нюбак', 'Томи', '18/11/1982', 43);			   --
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Агопов', 'Микаэл', '10/03/1985', 43);		   --471
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Бакро', 'Этьенн', '03/10/1987', 44);			   --
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Брикар', 'Эммануэль', '20/09/1997', 44);		   --
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Дас', 'Дебашис', '25/12/1988', 47);			   --
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Бакре', 'Теджас', '02/01/1976', 47);			   --475
+INSERT INTO CHESS_PLAYERS (surname,name,birth_date,country_id) VALUES('Василевская', 'Варвара', '05/12/2000', 1);      --476
+
+
+INSERT INTO TOURNAMENTS (tournament,beginning_date,ending_date,country_id,comment) VALUES('Турнир чемпионов 2018', '01/02/2018', '15/02/2018', 21, 'В данном турнире участвует 4 рандомных шахматистов'); 			  --301
+INSERT INTO TOURNAMENTS (tournament,beginning_date,ending_date,country_id,comment) VALUES('Турнир чемпионов 2016', '05/04/2016', '25/04/2016', 43, '');
+INSERT INTO TOURNAMENTS (tournament,beginning_date,ending_date,country_id,comment) VALUES('Турнир чемпионов 2014', '12/02/2014', '01/03/2014', 43, '');			  --
+INSERT INTO TOURNAMENTS (tournament,beginning_date,ending_date,country_id) VALUES('Гран-при Москва', '21/10/2015', '29/10/2015', 1);							  --
+INSERT INTO TOURNAMENTS (tournament,beginning_date,ending_date,country_id) VALUES('Гран-при Торонто', '01/11/2015', '10/11/2015', 10);							  --305
+INSERT INTO TOURNAMENTS (tournament,beginning_date,ending_date,country_id) VALUES('Гран-при Манчестер', '03/10/2015', '16/10/2015', 6);	
+INSERT INTO TOURNAMENTS (tournament,beginning_date,ending_date,country_id) VALUES('Просто Кубок', '02/11/2012', '27/11/2012', 6);						  --
+INSERT INTO TOURNAMENTS (tournament,beginning_date,ending_date,country_id,comment) VALUES('Самый крутой турнир на диком западе', '05/09/2018', '16/10/2018', 1, '');--	
+INSERT INTO TOURNAMENTS (tournament,beginning_date,ending_date,country_id,comment) VALUES('Кубок планеты 1975', '01/06/1975', '23/06/1975', 8, '');				  --309
+
+
+INSERT INTO STAGES (tournament_id,beginning_date,ending_date,stage_number,system_id) VALUES(308, '05/09/2018', '28/09/2018', 1, 124);--3001
+INSERT INTO STAGES (tournament_id,beginning_date,ending_date,stage_number,system_id) VALUES(308, '01/10/2018', '15/10/2018', 2, 122);--3002
+
+INSERT INTO STAGES (tournament_id,beginning_date,ending_date,stage_number,system_id) VALUES(304, '21/10/2015', '23/10/2015', 1, 123);--3003
+INSERT INTO STAGES (tournament_id,beginning_date,ending_date,stage_number,system_id) VALUES(304, '24/10/2015', '26/10/2015', 1, 123);--
+INSERT INTO STAGES (tournament_id,beginning_date,ending_date,stage_number,system_id) VALUES(304, '27/10/2015', '28/10/2015', 2, 123);--3005
+INSERT INTO STAGES (tournament_id,beginning_date,ending_date,stage_number,system_id) VALUES(304, '28/10/2015', '29/10/2015', 2, 123);--
+
+INSERT INTO STAGES (tournament_id,beginning_date,ending_date,stage_number,system_id) VALUES(305, '01/11/2015', '03/11/2015', 1, 123);--3007
+INSERT INTO STAGES (tournament_id,beginning_date,ending_date,stage_number,system_id) VALUES(305, '04/11/2015', '06/11/2015', 1, 123);--3008
+INSERT INTO STAGES (tournament_id,beginning_date,ending_date,stage_number,system_id) VALUES(305, '07/11/2015', '08/11/2015', 2, 123);--
+INSERT INTO STAGES (tournament_id,beginning_date,ending_date,stage_number,system_id) VALUES(305, '09/11/2015', '10/11/2015', 2, 123);--3010
+
+INSERT INTO STAGES (tournament_id,beginning_date,ending_date,stage_number,system_id) VALUES(306, '03/10/2015', '05/10/2015', 1, 123);--
+INSERT INTO STAGES (tournament_id,beginning_date,ending_date,stage_number,system_id) VALUES(306, '06/10/2015', '08/10/2015', 1, 123);--
+INSERT INTO STAGES (tournament_id,beginning_date,ending_date,stage_number,system_id) VALUES(306, '09/10/2015', '10/10/2015', 2, 123);--3013
+INSERT INTO STAGES (tournament_id,beginning_date,ending_date,stage_number,system_id) VALUES(306, '12/10/2015', '13/10/2015', 2, 123);--3014
+
+INSERT INTO STAGES (tournament_id,beginning_date,ending_date,stage_number,system_id) VALUES(301, '01/02/2018', '05/02/2108', 1, 122);--3015
+INSERT INTO STAGES (tournament_id,beginning_date,ending_date,stage_number,system_id) VALUES(301, '06/02/2018', '10/02/2108', 2, 122);--
+INSERT INTO STAGES (tournament_id,beginning_date,ending_date,stage_number,system_id) VALUES(301, '11/02/2018', '15/02/2018', 3, 122);--3017
+
+INSERT INTO STAGES (tournament_id,beginning_date,ending_date,stage_number,system_id) VALUES(302, '05/04/2016', '10/04/2016', 1, 122);--
+INSERT INTO STAGES (tournament_id,beginning_date,ending_date,stage_number,system_id) VALUES(302, '12/04/2016', '18/04/2016', 2, 122);--3019
+INSERT INTO STAGES (tournament_id,beginning_date,ending_date,stage_number,system_id) VALUES(302, '19/04/2016', '25/04/2016', 3, 122);
+
+INSERT INTO STAGES (tournament_id,beginning_date,ending_date,stage_number,system_id) VALUES(303, '12/02/2014', '17/02/2014', 1, 122);
+INSERT INTO STAGES (tournament_id,beginning_date,ending_date,stage_number,system_id) VALUES(303, '19/02/2014', '24/02/2014', 2, 122);
+INSERT INTO STAGES (tournament_id,beginning_date,ending_date,stage_number,system_id) VALUES(303, '27/02/2014', '01/03/2014', 3, 122);--3023
+
+INSERT INTO STAGES (tournament_id,beginning_date,ending_date,stage_number,system_id) VALUES(309, '01/06/1975', '04/06/1975', 1, 121);--3024
+INSERT INTO STAGES (tournament_id,beginning_date,ending_date,stage_number,system_id) VALUES(309, '04/06/1975', '08/06/1975', 2, 121);--
+INSERT INTO STAGES (tournament_id,beginning_date,ending_date,stage_number,system_id) VALUES(309, '08/06/1975', '12/06/1975', 3, 121);--3026
+INSERT INTO STAGES (tournament_id,beginning_date,ending_date,stage_number,system_id) VALUES(309, '12/06/1975', '16/06/1975', 4, 121);--
+INSERT INTO STAGES (tournament_id,beginning_date,ending_date,stage_number,system_id) VALUES(309, '16/06/1975', '20/06/1975', 5, 121);--3028
+INSERT INTO STAGES (tournament_id,beginning_date,ending_date,stage_number,system_id) VALUES(309, '20/06/1975', '22/06/1975', 6, 121);--3029
+
+INSERT INTO STAGES (tournament_id,beginning_date,ending_date,stage_number,system_id) VALUES(307, '02/11/2012', '06/11/2012', 1, 123);--3030
+INSERT INTO STAGES (tournament_id,beginning_date,ending_date,stage_number,system_id) VALUES(307, '06/11/2012', '10/11/2012', 2, 123);--
+INSERT INTO STAGES (tournament_id,beginning_date,ending_date,stage_number,system_id) VALUES(307, '10/11/2012', '14/11/2012', 3, 123);--3032
+INSERT INTO STAGES (tournament_id,beginning_date,ending_date,stage_number,system_id) VALUES(307, '14/11/2012', '18/11/2012', 4, 123);--
+INSERT INTO STAGES (tournament_id,beginning_date,ending_date,stage_number,system_id) VALUES(307, '18/11/2012', '22/11/2012', 5, 123);--3034
+INSERT INTO STAGES (tournament_id,beginning_date,ending_date,stage_number,system_id) VALUES(307, '22/11/2012', '26/11/2012', 6, 123);
+
+
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3001, 211, '23/09/2018', 49, 141);   --1001
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3001, 213, '18/09/2018', 74, 141);   --1002
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3001, 204, '13/09/2018', 38, 141);   --1003
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3001, 220, '18/09/2018', 59, 141);   --1004
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3002, 210, '05/10/2018', 44, 143);   --1005
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3002, 201, '02/10/2018', 25, 143);   --1006
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3002, 206, '04/10/2018', 21, 143);   --1007
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3002, 229, '07/10/2018', 69, 143);   --1008
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3002, 227, '01/10/2018', 47, 143);   --1009
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3002, 232, '12/10/2018', 31, 143);   --1010
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3002, 202, '14/10/2018', 26, 143);   --1011
+
+																			
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3018, 234, '05/04/2016', 36, 144);--12
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3018, 223, '06/04/2016', 64, 144);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3018, 207, '07/04/2016', 79, 144);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3018, 225, '08/04/2016', 51, 144);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3018, 226, '09/04/2016', 66, 144);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3018, 225, '10/04/2016', 38, 144);--
+																							
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3019, 239, '12/04/2016', 25, 144);--18
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3019, 213, '13/04/2016', 44, 144);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3019, 236, '14/04/2016', 28, 144);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3019, 240, '15/04/2016', 63, 144);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3019, 235, '16/04/2016', 56, 144);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3019, 210, '18/04/2016', 77, 144);--
+																				
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3020, 227, '19/04/2016', 75, 144);--24
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3020, 209, '20/04/2016', 44, 144);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3020, 241, '21/04/2016', 25, 144);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3020, 224, '25/04/2016', 21, 144);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3020, 208, '23/04/2016', 69, 144);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3020, 227, '24/04/2016', 47, 144);--
+
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3021, 218, '12/02/2014', 36, 144);--30
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3021, 214, '13/02/2014', 64, 144);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3021, 222, '14/02/2014', 79, 144);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3021, 217, '15/02/2014', 51, 144);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3021, 209, '16/02/2014', 66, 144);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3021, 217, '17/02/2014', 38, 144);--
+																							
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3022, 235, '19/02/2014', 44, 144);--36
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3022, 231, '20/02/2014', 28, 144);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3022, 218, '21/02/2014', 63, 144);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3022, 214, '22/02/2014', 56, 144);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3022, 221, '23/02/2014', 77, 144);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3022, 233, '24/02/2014', 80, 144);--
+																				
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3023, 214, '27/02/2014', 44, 144);--42
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3023, 210, '27/02/2014', 25, 144);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3023, 206, '28/02/2014', 21, 144);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3023, 232, '28/02/2014', 69, 144);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3023, 212, '01/03/2014', 47, 144);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3023, 242, '01/03/2014', 31, 144);--
+
+
+
+																								
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3024, 230, '10/09/2018', 25, 144);--48
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3024, 221, '16/09/2018', 21, 144);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3024, 209, '17/09/2018', 69, 144);--50
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3024, 239, '21/09/2018', 47, 144);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3024, 204, '18/09/2018', 31, 144);--52
+
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3025, 207, '12/09/2018', 26, 144);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3025, 225, '13/09/2018', 60, 144);--54
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3025, 234, '14/09/2018', 70, 144);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3025, 240, '10/09/2018', 54, 144);--56
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3025, 212, '09/09/2018', 32, 144);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3025, 208, '11/09/2018', 66, 144);--58
+
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3026, 237, '12/09/2018', 38, 144);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3026, 229, '14/09/2018', 22, 144);--60
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3026, 217, '15/09/2018', 48, 144);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3026, 228, '15/09/2018', 39, 144);--62
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3026, 201, '19/09/2018', 63, 144);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3026, 231, '10/09/2018', 25, 144);--64
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3026, 218, '16/09/2018', 21, 144);--
+
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3027, 236, '17/09/2018', 69, 144);--66
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3027, 238, '21/09/2018', 47, 144);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3027, 223, '18/09/2018', 31, 144);--68
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3027, 206, '12/09/2018', 26, 144);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3027, 242, '13/09/2018', 60, 144);--70
+
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3028, 220, '14/09/2018', 70, 144);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3028, 213, '10/09/2018', 54, 144);--72
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3028, 211, '09/09/2018', 32, 144);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3028, 233, '11/09/2018', 66, 144);--74
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3028, 225, '12/09/2018', 38, 144);--
+
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3029, 234, '14/09/2018', 22, 144);--76
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3029, 218, '15/09/2018', 48, 144);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3029, 229, '15/09/2018', 39, 144);--78
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3029, 203, '19/09/2018', 63, 144);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3029, 233, '10/09/2018', 25, 144);--80
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3029, 236, '16/09/2018', 21, 144);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3029, 213, '17/09/2018', 69, 144);--82
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3029, 223, '21/09/2018', 47, 144);--
+																						   
+
+
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3003, 202, '10/09/2018', 25, 143);--84
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3003, 221, '16/09/2018', 21, 143);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3003, 235, '17/09/2018', 69, 143);--86
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3003, 230, '21/09/2018', 47, 143);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3003, 219, '10/09/2018', 25, 143);--88
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3003, 241, '16/09/2018', 21, 143);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3003, 211, '17/09/2018', 69, 143);--90
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3003, 228, '21/09/2018', 47, 143);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3004, 209, '10/09/2018', 25, 143);--92
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3004, 215, '16/09/2018', 21, 143);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3004, 212, '17/09/2018', 69, 143);--94
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3004, 227, '21/09/2018', 47, 143);--
+																						   
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3007, 222, '10/09/2018', 25, 143);--96
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3007, 232, '16/09/2018', 21, 143);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3007, 239, '17/09/2018', 69, 143);--98
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3007, 237, '21/09/2018', 47, 143);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3007, 226, '10/09/2018', 25, 143);--100
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3007, 206, '16/09/2018', 21, 143);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3007, 210, '17/09/2018', 69, 143);--102
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3007, 207, '21/09/2018', 47, 143);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3008, 216, '10/09/2018', 25, 143);--104
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3008, 217, '16/09/2018', 21, 143);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3008, 242, '17/09/2018', 69, 143);--106
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3008, 204, '21/09/2018', 47, 143);--
+																						   
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3011, 238, '10/09/2018', 25, 143);--108
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3011, 240, '16/09/2018', 21, 143);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3011, 208, '17/09/2018', 69, 143);--110
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3011, 205, '21/09/2018', 47, 143);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3011, 224, '10/09/2018', 25, 143);--112
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3011, 241, '16/09/2018', 21, 143);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3011, 216, '17/09/2018', 69, 143);--114
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3011, 214, '21/09/2018', 47, 143);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3012, 227, '10/09/2018', 25, 143);--116
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3012, 215, '16/09/2018', 21, 143);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3012, 232, '17/09/2018', 69, 143);--118
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3012, 226, '21/09/2018', 47, 143);--
+																						   
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3003, 205, '16/09/2018', 21, 142);--120
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3003, 224, '17/09/2018', 69, 142);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3004, 222, '21/09/2018', 47, 142);--122
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3007, 235, '16/09/2018', 21, 142);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3007, 202, '17/09/2018', 69, 142);--124
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3007, 210, '21/09/2018', 47, 142);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3007, 203, '16/09/2018', 21, 142);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3011, 201, '17/09/2018', 69, 142);--127
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3011, 219, '21/09/2018', 47, 142);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3011, 214, '16/09/2018', 21, 142);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3012, 231, '17/09/2018', 69, 142);--130
+
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3005, 220, '10/09/2018', 25, 143);--131
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3005, 213, '16/09/2018', 21, 143);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3009, 211, '17/09/2018', 69, 143);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3009, 233, '21/09/2018', 47, 143);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3013, 225, '10/09/2018', 25, 143);--135
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3013, 234, '16/09/2018', 21, 143);--
+									
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3006, 229, '17/09/2018', 69, 143);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3010, 203, '21/09/2018', 47, 143);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3014, 233, '10/09/2018', 25, 143);--139
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3014, 236, '16/09/2018', 21, 143);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3010, 213, '17/09/2018', 69, 143);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3006, 223, '21/09/2018', 47, 143);--142
+																						   
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3009, 202, '10/09/2018', 25, 143);--143
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3005, 221, '16/09/2018', 21, 143);--
+INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3014, 235, '17/09/2018', 69, 143);--145  переиграть чтобы был победитель
+																						   
+--INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3015, 219, '01/02/2018', 74, 144);   --1015
+--INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3015, 241, '05/02/2018', 38, 144);   --1016
+--INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3015, 211, '03/02/2018', 59, 144);   --1017
+--INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3015, 228, '01/02/2018', 44, 144);   --1018
+--INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3015, 209, '04/02/2018', 25, 144);   --1019
+--INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3015, 215, '02/02/2018', 21, 144);   --1020
+--																						   
+--INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3016, 227, '10/02/2018', 74, 144);   --1025
+--INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3016, 231, '06/02/2018', 38, 144);   --1003
+--INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3016, 222, '07/02/2018', 59, 144);   --1004
+--INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3016, 232, '08/02/2018', 44, 144);   --1005
+--INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3016, 239, '09/02/2018', 25, 144);   --1006
+--INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3016, 237, '10/02/2018', 21, 144);   --1007
+--																						   
+--INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3017, 206, '13/02/2018', 25, 144);   --1006
+--INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3017, 210, '14/02/2018', 21, 144);   --1007
+--INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3017, 207, '15/02/2018', 69, 144);   --1008
+--INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3017, 216, '11/02/2018', 47, 144);   --1009
+--INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3017, 217, '14/02/2018', 31, 144);   --1010
+--INSERT INTO GAMES (stage_id,debut_id,gamedate,number_of_moves,timecontrol_id) VALUES(3017, 242, '12/02/2018', 26, 144);   --1011
+
+
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(411, 1084, 102, 1); --стадии 3003-4
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(454, 1084, 101, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(455, 1085, 102, 0.5);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(460, 1085, 101, 0.5);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(434, 1086, 102, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(452, 1086, 101, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(474, 1087, 102, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(448, 1087, 101, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(443, 1088, 102, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(461, 1088, 101, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(471, 1089, 102, 0.5);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(421, 1089, 101, 0.5);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(435, 1090, 102, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(465, 1090, 101, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(468, 1091, 102, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(446, 1091, 101, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(411, 1092, 102, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(452, 1092, 101, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(448, 1093, 102, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(443, 1093, 101, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(468, 1094, 102, 0.5);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(435, 1094, 101, 0.5);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(421, 1095, 102, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(455, 1095, 101, 1);
+
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(458, 1096, 102, 0.5); --стадии 3007-8
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(475, 1096, 101, 0.5);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(422, 1097, 102, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(438, 1097, 101, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(419, 1098, 102, 0.5);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(457, 1098, 101, 0.5);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(429, 1099, 102, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(427, 1099, 101, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(450, 1100, 102, 0.5);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(436, 1100, 101, 0.5);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(441, 1101, 102, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(416, 1101, 101, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(415, 1102, 102, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(424, 1102, 101, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(456, 1103, 102, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(442, 1103, 101, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(419, 1104, 102, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(475, 1104, 101, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(450, 1105, 102, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(442, 1105, 101, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(427, 1106, 102, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(422, 1106, 101, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(441, 1107, 102, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(415, 1107, 101, 0);
+
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(449, 1108, 102, 1);  -- стадии 3011-12
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(473, 1108, 101, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(466, 1109, 102, 0.5);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(440, 1109, 101, 0.5);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(428, 1110, 102, 0.5);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(425, 1110, 101, 0.5);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(453, 1111, 102, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(464, 1111, 101, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(414, 1112, 102, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(417, 1112, 101, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(445, 1113, 102, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(433, 1113, 101, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(430, 1114, 102, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(432, 1114, 101, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(472, 1115, 102, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(431, 1115, 101, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(425, 1116, 102, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(440, 1116, 101, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(472, 1117, 102, 0.5);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(445, 1117, 101, 0.5);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(449, 1118, 102, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(432, 1118, 101, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(464, 1119, 102, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(414, 1119, 101, 0);
+
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(421, 1120, 102, 1); -- переигрывали чтобы гарантированно был победитель
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(471, 1120, 101, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(460, 1121, 102, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(455, 1121, 101, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(435, 1122, 102, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(468, 1122, 101, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(475, 1123, 102, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(458, 1123, 101, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(457, 1124, 102, 0.5);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(419, 1124, 101, 0.5);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(419, 1125, 102, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(457, 1125, 101, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(436, 1126, 102, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(450, 1126, 101, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(440, 1127, 102, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(466, 1127, 101, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(425, 1128, 102, 0.5);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(428, 1128, 101, 0.5);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(428, 1129, 102, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(425, 1129, 101, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(445, 1130, 102, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(472, 1130, 101, 0);
+
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(455, 1131, 102, 0.5);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(411, 1131, 101, 0.5); --в итоге выирал
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(448, 1132, 102, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(435, 1132, 101, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(441, 1133, 102, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(450, 1133, 101, 1);           -- полуфинал
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(419, 1134, 102, 0.5); 
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(422, 1134, 101, 0.5);-- и этот тоже
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(464, 1135, 102, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(445, 1135, 101, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(432, 1136, 102, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(425, 1136, 101, 0);
+
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(411, 1137, 102, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(448, 1137, 101, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(450, 1138, 102, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(422, 1138, 101, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(464, 1139, 102, 0.5);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(432, 1139, 101, 0.5);
+
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(425, 1140, 102, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(445, 1140, 101, 0); -- за 3-е место битва
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(419, 1141, 102, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(441, 1141, 101, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(455, 1142, 102, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(435, 1142, 101, 1);
+
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(422, 1143, 101, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(419, 1143, 101, 0); --чтоб был победитель
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(455, 1144, 101, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(411, 1144, 101, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(432, 1145, 101, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(464, 1145, 101, 1);
+
+
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(401, 1048, 102, 1); --стадии 3024-3029
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(406, 1048, 101, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(402, 1049, 102, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(407, 1049, 101, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(408, 1050, 102, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(403, 1050, 101, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(404, 1051, 102, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(409, 1051, 101, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(410, 1052, 102, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(405, 1052, 101, 0);
+
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(401, 1053, 102, 1); -- 3025
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(407, 1053, 101, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(402, 1054, 102, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(404, 1054, 101, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(410, 1055, 102, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(403, 1055, 101, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(408, 1056, 102, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(405, 1056, 101, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(406, 1057, 102, 0.5);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(409, 1057, 101, 0.5);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(409, 1058, 102, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(406, 1058, 101, 1);
+
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(409, 1059, 102, 1); --3026
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(408, 1059, 101, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(406, 1064, 102, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(407, 1064, 101, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(404, 1061, 102, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(403, 1061, 101, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(401, 1062, 102, 0.5);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(402, 1062, 101, 0.5);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(402, 1063, 102, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(401, 1063, 101, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(405, 1064, 102, 0.5);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(410, 1064, 101, 0.5);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(410, 1065, 102, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(405, 1065, 101, 0);
+
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(402, 1066, 102, 1); -- 3027
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(410, 1066, 101, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(404, 1067, 102, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(401, 1067, 101, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(403, 1068, 102, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(409, 1068, 101, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(407, 1069, 102, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(405, 1069, 101, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(406, 1070, 102, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(408, 1070, 101, 1);
+
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(407, 1071, 102, 0); -- 3028
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(402, 1071, 101, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(410, 1072, 102, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(401, 1072, 101, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(404, 1073, 102, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(403, 1073, 101, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(405, 1074, 102, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(408, 1074, 101, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(409, 1075, 102, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(406, 1075, 101, 1);
+
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(410, 1076, 102, 0.5); --3029
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(402, 1076, 101, 0.5);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(402, 1077, 102, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(410, 1077, 101, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(404, 1078, 102, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(401, 1078, 101, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(407, 1079, 102, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(406, 1079, 101, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(405, 1080, 102, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(403, 1080, 101, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(408, 1081, 102, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(409, 1081, 101, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(401, 1082, 102, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(403, 1082, 101, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(409, 1083, 102, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(407, 1083, 101, 1);
+
+
+
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(401, 3024);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(402, 3024);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(403, 3024);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(404, 3024);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(405, 3024);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(406, 3024);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(407, 3024);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(408, 3024);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(409, 3024);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(410, 3024);
+
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(401, 3025);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(402, 3025);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(403, 3025);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(404, 3025);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(405, 3025);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(406, 3025);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(407, 3025);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(408, 3025);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(409, 3025);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(410, 3025);
+
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(401, 3026);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(402, 3026);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(403, 3026);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(404, 3026);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(405, 3026);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(406, 3026);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(407, 3026);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(408, 3026);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(409, 3026);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(410, 3026);
+
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(401, 3027);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(402, 3027);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(403, 3027);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(404, 3027);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(405, 3027);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(406, 3027);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(407, 3027);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(408, 3027);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(409, 3027);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(410, 3027);
+
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(401, 3028);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(402, 3028);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(403, 3028);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(404, 3028);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(405, 3028);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(406, 3028);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(407, 3028);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(408, 3028);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(409, 3028);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(410, 3028);
+
+INSERT INTO STAGERESULTS (position,player_id,stage_id) VALUES('1', 402, 3029);
+INSERT INTO STAGERESULTS (position,player_id,stage_id) VALUES('2', 404, 3029);
+INSERT INTO STAGERESULTS (position,player_id,stage_id) VALUES('3', 410, 3029);
+INSERT INTO STAGERESULTS (position,player_id,stage_id) VALUES('4', 403, 3029);
+INSERT INTO STAGERESULTS (position,player_id,stage_id) VALUES('5', 401, 3029);
+INSERT INTO STAGERESULTS (position,player_id,stage_id) VALUES('6', 407, 3029);
+INSERT INTO STAGERESULTS (position,player_id,stage_id) VALUES('7', 409, 3029);
+INSERT INTO STAGERESULTS (position,player_id,stage_id) VALUES('8', 406, 3029);
+INSERT INTO STAGERESULTS (position,player_id,stage_id) VALUES('9', 405, 3029);
+INSERT INTO STAGERESULTS (position,player_id,stage_id) VALUES('10', 408, 3029);
+
+
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(411, 3003);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(452, 3003);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(448, 3003);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(443, 3003);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(468, 3003);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(435, 3003);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(421, 3003);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(455, 3003);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(435, 3004);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(448, 3004);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(411, 3004);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(455, 3004);
+
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(419, 3007);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(475, 3007);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(450, 3007);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(442, 3007);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(427, 3007);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(422, 3007);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(441, 3007);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(415, 3007);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(441, 3008);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(422, 3008);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(450, 3008);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(419, 3008);
+
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(425, 3011);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(440, 3011);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(472, 3011);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(445, 3011);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(449, 3011);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(432, 3011);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(464, 3011);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(414, 3011);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(464, 3012);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(432, 3012);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(425, 3012);
+INSERT INTO STAGERESULTS (player_id,stage_id) VALUES(445, 3012);
+
+INSERT INTO STAGERESULTS (position,player_id,stage_id) VALUES('1', 411, 3006);
+INSERT INTO STAGERESULTS (position,player_id,stage_id) VALUES('2', 448, 3006);
+INSERT INTO STAGERESULTS (position,player_id,stage_id) VALUES('3', 435, 3006);
+INSERT INTO STAGERESULTS (position,player_id,stage_id) VALUES('1', 422, 3010);
+INSERT INTO STAGERESULTS (position,player_id,stage_id) VALUES('2', 450, 3010);
+INSERT INTO STAGERESULTS (position,player_id,stage_id) VALUES('3', 419, 3010);
+INSERT INTO STAGERESULTS (position,player_id,stage_id) VALUES('1', 464, 3014);
+INSERT INTO STAGERESULTS (position,player_id,stage_id) VALUES('2', 432, 3014);
+INSERT INTO STAGERESULTS (position,player_id,stage_id) VALUES('3', 425, 3014);
+
+
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(423, 1001, 102, 0.5);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(424, 1001, 101, 0.5);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(425, 1002, 102, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(423, 1002, 101, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(422, 1003, 102, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(424, 1003, 101, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(422, 1004, 102, 0.5);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(425, 1004, 101, 0.5);
+
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(422, 1005, 102, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(423, 1005, 101, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(424, 1006, 102, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(422, 1006, 101, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(422, 1007, 102, 0.5);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(425, 1007, 101, 0.5);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(424, 1008, 102, 0.5);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(423, 1008, 101, 0.5);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(423, 1009, 102, 1);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(425, 1009, 101, 0);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id) VALUES(425, 1010, 102);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id) VALUES(424, 1010, 101);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(424, 1011, 102, 0.5);
+INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(425, 1011, 101, 0.5);
+
+
+INSERT INTO STAGERESULTS (position,player_id,stage_id) VALUES('1', 423, 3002);
+INSERT INTO STAGERESULTS (position,player_id,stage_id) VALUES('2', 424, 3002);
+INSERT INTO STAGERESULTS (position,player_id,stage_id) VALUES('3', 425, 3002);
+INSERT INTO STAGERESULTS (position,player_id,stage_id) VALUES('4', 422, 3002);
+
+
+--INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(407, 1056, 102, 1);
+--INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(406, 1056, 101, 0);
+--INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(408, 1057, 102, 0.5);
+--INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(401, 1057, 101, 0.5);
+--INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(402, 1058, 102, 1);
+--INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(404, 1058, 101, 0);
+--INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(403, 1059, 102, 0);
+--INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(405, 1059, 101, 1);
+--INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(405, 1060, 102, 0);
+--INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(407, 1060, 101, 1);
+--INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(402, 1061, 102, 0.5);
+--INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(404, 1061, 101, 0.5);
+--INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(401, 1062, 102, 1);
+--INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(408, 1062, 101, 0);
+--INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(406, 1063, 102, 1);
+--INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(403, 1063, 101, 0);
+--INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(403, 1064, 102, 0.5);
+--INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(401, 1064, 101, 0.5);
+--INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(405, 1065, 102, 1);
+--INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(406, 1065, 101, 0);
+--INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(404, 1066, 102, 0);
+--INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(407, 1066, 101, 1);
+--INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(408, 1067, 102, 0);
+--INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(402, 1067, 101, 1);
+--INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(407, 1068, 102, 0.5);
+--INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(404, 1068, 101, 0.5);
+--INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(408, 1069, 102, 1);
+--INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(405, 1069, 101, 0);
+--INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(403, 1070, 102, 0);
+--INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(401, 1070, 101, 1);
+--INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(402, 1071, 102, 1);
+--INSERT INTO PLAYER_GAME (player_id,game_id,colour_id,points) VALUES(406, 1071, 101, 0);
+
+INSERT INTO GAMES_MISTAKES VALUES(280, 1001);
+INSERT INTO GAMES_MISTAKES VALUES(283, 1002);
+INSERT INTO GAMES_MISTAKES VALUES(278, 1003);
+INSERT INTO GAMES_MISTAKES VALUES(282, 1005);
+INSERT INTO GAMES_MISTAKES VALUES(277, 1005);
+INSERT INTO GAMES_MISTAKES VALUES(281, 1006);
+INSERT INTO GAMES_MISTAKES VALUES(275, 1006);
+INSERT INTO GAMES_MISTAKES VALUES(279, 1007);
+INSERT INTO GAMES_MISTAKES VALUES(284, 1007);
+INSERT INTO GAMES_MISTAKES VALUES(276, 1008);
+INSERT INTO GAMES_MISTAKES VALUES(280, 1008);
+INSERT INTO GAMES_MISTAKES VALUES(276, 1009);
+INSERT INTO GAMES_MISTAKES VALUES(279, 1010);
+INSERT INTO GAMES_MISTAKES VALUES(278, 1010);
+INSERT INTO GAMES_MISTAKES VALUES(283, 1011);
+INSERT INTO GAMES_MISTAKES VALUES(275, 1011);
+
+INSERT INTO GAMES_MISTAKES VALUES(277, 1012);
+INSERT INTO GAMES_MISTAKES VALUES(284, 1012);
+INSERT INTO GAMES_MISTAKES VALUES(281, 1013);
+INSERT INTO GAMES_MISTAKES VALUES(282, 1013);
+INSERT INTO GAMES_MISTAKES VALUES(279, 1014);
+INSERT INTO GAMES_MISTAKES VALUES(280, 1015);
+INSERT INTO GAMES_MISTAKES VALUES(275, 1016);
+INSERT INTO GAMES_MISTAKES VALUES(281, 1017);
+INSERT INTO GAMES_MISTAKES VALUES(278, 1019);
+INSERT INTO GAMES_MISTAKES VALUES(283, 1020);
+INSERT INTO GAMES_MISTAKES VALUES(276, 1020);
+INSERT INTO GAMES_MISTAKES VALUES(284, 1021);
+INSERT INTO GAMES_MISTAKES VALUES(277, 1021);
+INSERT INTO GAMES_MISTAKES VALUES(282, 1022);
+INSERT INTO GAMES_MISTAKES VALUES(275, 1024);
+INSERT INTO GAMES_MISTAKES VALUES(276, 1024);
+INSERT INTO GAMES_MISTAKES VALUES(283, 1024);
+INSERT INTO GAMES_MISTAKES VALUES(281, 1025);
+INSERT INTO GAMES_MISTAKES VALUES(279, 1026);
+INSERT INTO GAMES_MISTAKES VALUES(284, 1027);
+INSERT INTO GAMES_MISTAKES VALUES(282, 1027);
+INSERT INTO GAMES_MISTAKES VALUES(280, 1029);
+INSERT INTO GAMES_MISTAKES VALUES(278, 1030);
+INSERT INTO GAMES_MISTAKES VALUES(277, 1030);
+INSERT INTO GAMES_MISTAKES VALUES(277, 1031);
+INSERT INTO GAMES_MISTAKES VALUES(284, 1032);
+INSERT INTO GAMES_MISTAKES VALUES(281, 1032);
+INSERT INTO GAMES_MISTAKES VALUES(282, 1033);
+INSERT INTO GAMES_MISTAKES VALUES(279, 1033);
+INSERT INTO GAMES_MISTAKES VALUES(280, 1033);
+INSERT INTO GAMES_MISTAKES VALUES(275, 1034);
+INSERT INTO GAMES_MISTAKES VALUES(281, 1034);
+INSERT INTO GAMES_MISTAKES VALUES(278, 1035);
+INSERT INTO GAMES_MISTAKES VALUES(283, 1035);
+INSERT INTO GAMES_MISTAKES VALUES(276, 1035);
+INSERT INTO GAMES_MISTAKES VALUES(284, 1036);
+INSERT INTO GAMES_MISTAKES VALUES(277, 1037);
+INSERT INTO GAMES_MISTAKES VALUES(282, 1038);
+INSERT INTO GAMES_MISTAKES VALUES(275, 1039);
+INSERT INTO GAMES_MISTAKES VALUES(276, 1039);
+INSERT INTO GAMES_MISTAKES VALUES(283, 1039);
+INSERT INTO GAMES_MISTAKES VALUES(281, 1040);
+INSERT INTO GAMES_MISTAKES VALUES(279, 1040);
+INSERT INTO GAMES_MISTAKES VALUES(284, 1040);
+INSERT INTO GAMES_MISTAKES VALUES(282, 1043);
+INSERT INTO GAMES_MISTAKES VALUES(280, 1043);
+INSERT INTO GAMES_MISTAKES VALUES(278, 1044);
+INSERT INTO GAMES_MISTAKES VALUES(277, 1044);
+
+
+INSERT INTO RATING VALUES(401, 2478, '19/09/2018');
+INSERT INTO RATING VALUES(402, 2581, '18/09/2018');
+INSERT INTO RATING VALUES(402, 2384, '18/09/2014'); ---------<<<<<<<<<
+INSERT INTO RATING VALUES(402, 2576, '15/09/2018'); ---------<<<<<<<<<
+INSERT INTO RATING VALUES(403, 2683, '20/09/2018');
+INSERT INTO RATING VALUES(404, 2692, '20/09/2018');
+INSERT INTO RATING VALUES(405, 2745, '20/09/2018');
+INSERT INTO RATING VALUES(406, 2784, '20/09/2015');
+INSERT INTO RATING VALUES(407, 2731, '20/09/2018');
+INSERT INTO RATING VALUES(408, 2756, '20/09/2018');
+INSERT INTO RATING VALUES(409, 2712, '20/09/2018');
+INSERT INTO RATING VALUES(410, 2742, '20/09/2018');
+INSERT INTO RATING VALUES(411, 2731, '20/09/2018');
+INSERT INTO RATING VALUES(412, 2821, '20/09/2018');
+INSERT INTO RATING VALUES(413, 2812, '20/09/2018');
+INSERT INTO RATING VALUES(414, 2796, '20/09/2018');
+INSERT INTO RATING VALUES(415, 2799, '20/09/2018');
+INSERT INTO RATING VALUES(416, 2676, '20/09/2018');
+INSERT INTO RATING VALUES(417, 2635, '20/09/2018');
+INSERT INTO RATING VALUES(418, 2691, '20/09/2018');
+INSERT INTO RATING VALUES(419, 2653, '20/09/2018');
+INSERT INTO RATING VALUES(420, 2678, '20/09/2018');
+INSERT INTO RATING VALUES(421, 2665, '20/09/2018');
+INSERT INTO RATING VALUES(422, 1149, '20/09/2018');
+INSERT INTO RATING VALUES(423, 1387, '20/09/2018');
+INSERT INTO RATING VALUES(424, 1236, '20/09/2018');
+INSERT INTO RATING VALUES(425, 1248, '20/09/2018');
+INSERT INTO RATING VALUES(426, 1755, '20/09/2018');
+INSERT INTO RATING VALUES(427, 1836, '20/09/2018');
+INSERT INTO RATING VALUES(428, 1892, '20/09/2018');
+INSERT INTO RATING VALUES(429, 1761, '20/09/2018');
+INSERT INTO RATING VALUES(430, 1797, '20/09/2018');
+INSERT INTO RATING VALUES(431, 1818, '20/09/2018');
+INSERT INTO RATING VALUES(432, 1661, '20/09/2018');
+INSERT INTO RATING VALUES(433, 1613, '20/09/2018');
+INSERT INTO RATING VALUES(434, 1818, '20/09/2018');
+INSERT INTO RATING VALUES(435, 1702, '20/09/2018');
+INSERT INTO RATING VALUES(436, 1744, '20/09/2018');
+INSERT INTO RATING VALUES(437, 1691, '20/09/2018');
+INSERT INTO RATING VALUES(438, 1789, '20/09/2018');
+INSERT INTO RATING VALUES(439, 1876, '20/09/2018');
+INSERT INTO RATING VALUES(440, 1833, '20/09/2018');
+INSERT INTO RATING VALUES(441, 1918, '20/09/2018');
+INSERT INTO RATING VALUES(442, 1675, '20/09/2018');
+INSERT INTO RATING VALUES(476, 1100, '21/09/2018');
