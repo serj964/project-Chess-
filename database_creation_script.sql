@@ -31,30 +31,30 @@ DROP TABLE TOURNAMENTS;
 IF OBJECT_ID (N'COUNTRIES', N'TABLE') IS NOT NULL 
 DROP TABLE COUNTRIES;
 
-create table DEBUTCLASSIFICATION (--норм
+create table DEBUTCLASSIFICATION (
   classification varchar(25),
   classification_id tinyint NOT NULL PRIMARY KEY,
   comment varchar(400)
 );
 
-create table DEBUTS (--норм
+create table DEBUTS (
   debut varchar(100),
   debut_id smallint IDENTITY(201,1) NOT NULL PRIMARY KEY,
   classification_id tinyint,
   debut_notation varchar(70)
 );
 
-create table COUNTRIES (--норм
+create table COUNTRIES (
   country_id smallint NOT NULL PRIMARY KEY,
   country varchar(70)
 );
 
-create table COLOUR (--норм
+create table COLOUR (
   colour varchar(6),
   colour_id smallint NOT NULL PRIMARY KEY
 );
 
-create table PLAYER_GAME (--норм
+create table PLAYER_GAME (
   player_id smallint NOT NULL,
   game_id int NOT NULL,
   colour_id smallint,
@@ -62,7 +62,7 @@ create table PLAYER_GAME (--норм
   PRIMARY KEY (player_id,game_id)
 );
 
-create table CHESS_PLAYERS (--норм
+create table CHESS_PLAYERS (
   name varchar(40),
   surname varchar(50),
   player_id smallint IDENTITY(401,1) NOT NULL PRIMARY KEY,
@@ -70,14 +70,14 @@ create table CHESS_PLAYERS (--норм
   country_id smallint
 );
 
-create table STAGERESULTS (--норм
-  position varchar(30) DEFAULT 'игрок перешёл в следующий тур',
+create table STAGERESULTS (
+  position varchar(30) DEFAULT 'РёРіСЂРѕРє РїРµСЂРµС€С‘Р» РІ СЃР»РµРґСѓСЋС‰РёР№ С‚СѓСЂ',
   player_id smallint NOT NULL,
   stage_id smallint NOT NULL,
   PRIMARY KEY (player_id, stage_id)
 );
 
-create table GAMES (--норм
+create table GAMES (
   game_id int IDENTITY(1001,1) NOT NULL PRIMARY KEY,
   stage_id smallint,
   debut_id smallint,
@@ -87,21 +87,21 @@ create table GAMES (--норм
   timecontrol_id tinyint
 );
 
-create table RATING (--норм
+create table RATING (
   player_id smallint NOT NULL,
   rating smallint,
   change_date datetime NOT NULL,
   PRIMARY KEY (player_id, change_date)
 );
 
-create table TIMECONTROL (--норм
+create table TIMECONTROL (
   timecontrol varchar(40),
   timecontrol_id tinyint NOT NULL PRIMARY KEY,
   lower_timelimit time(0),
   upper_timelimit time(0)
 );
 
-create table TOURNAMENTS (--норм
+create table TOURNAMENTS (
   tournament varchar(150),
   tournament_id smallint IDENTITY(301,1) NOT NULL PRIMARY KEY,
   beginning_date date,
@@ -110,19 +110,19 @@ create table TOURNAMENTS (--норм
   comment varchar(400)
 );
 
-create table GAMES_MISTAKES (--норм
+create table GAMES_MISTAKES (
   mistake_id smallint NOT NULL,
   game_id int NOT NULL,
   PRIMARY KEY (mistake_id, game_id)
 );
 
-create table MISTAKES (--норм
+create table MISTAKES (
   mistake varchar(200),
   mistake_id smallint IDENTITY(275,1) NOT NULL PRIMARY KEY,
   comment varchar(400)
 );
 
-create table STAGES (--норм
+create table STAGES (
   tournament_id smallint,
   stage_id smallint IDENTITY(3001,1) NOT NULL PRIMARY KEY,
   beginning_date date,
@@ -131,25 +131,25 @@ create table STAGES (--норм
   system_id tinyint
 );
 
-create table SYSTEMNAME (--норм
+create table SYSTEMNAME (
   systemname varchar(20),
   system_id tinyint NOT NULL PRIMARY KEY,
   comment varchar(400)
 );
 
-ALTER TABLE DEBUTS ADD --норм
+ALTER TABLE DEBUTS ADD
 	FOREIGN KEY (classification_id)
 		REFERENCES DEBUTCLASSIFICATION (classification_id)
 
-ALTER TABLE RATING ADD --норм
+ALTER TABLE RATING ADD
 	FOREIGN KEY (player_id)
 		REFERENCES CHESS_PLAYERS (player_id)
 
-ALTER TABLE CHESS_PLAYERS ADD --норм
+ALTER TABLE CHESS_PLAYERS ADD
 	FOREIGN KEY (country_id)
 		REFERENCES COUNTRIES (country_id)
 
-ALTER TABLE PLAYER_GAME ADD --норм
+ALTER TABLE PLAYER_GAME ADD
 	FOREIGN KEY (player_id)
 		REFERENCES CHESS_PLAYERS (player_id),
 	FOREIGN KEY (game_id)
@@ -157,29 +157,29 @@ ALTER TABLE PLAYER_GAME ADD --норм
 	FOREIGN KEY (colour_id)
 		REFERENCES COLOUR (colour_id)
 
-ALTER TABLE STAGERESULTS ADD --норм
+ALTER TABLE STAGERESULTS ADD
 	FOREIGN KEY (player_id)
 		REFERENCES CHESS_PLAYERS (player_id),
 	FOREIGN KEY (stage_id)
 		REFERENCES STAGES (stage_id)
 
-ALTER TABLE TOURNAMENTS ADD --норм
+ALTER TABLE TOURNAMENTS ADD
 	FOREIGN KEY (country_id)
 		REFERENCES COUNTRIES (country_id)
 
-ALTER TABLE GAMES_MISTAKES ADD --норм
+ALTER TABLE GAMES_MISTAKES ADD
 	FOREIGN KEY (mistake_id)
 		REFERENCES MISTAKES (mistake_id),
 	FOREIGN KEY (game_id)
 		REFERENCES GAMES (game_id)
 
-ALTER TABLE GAMES ADD --норм
+ALTER TABLE GAMES ADD
 	FOREIGN KEY (stage_id)
 		REFERENCES STAGES (stage_id),
 	FOREIGN KEY (debut_id)
 		REFERENCES DEBUTS (debut_id)
 
-ALTER TABLE STAGES ADD --норм
+ALTER TABLE STAGES ADD
 	FOREIGN KEY (tournament_id)
 		REFERENCES TOURNAMENTS (tournament_id),
 	FOREIGN KEY (system_id)
