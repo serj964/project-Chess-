@@ -1,4 +1,4 @@
---вывести названия турниров в которых участвовал самый молодой шахматист
+--РІС‹РІРµСЃС‚Рё РЅР°Р·РІР°РЅРёСЏ С‚СѓСЂРЅРёСЂРѕРІ РІ РєРѕС‚РѕСЂС‹С… СѓС‡Р°СЃС‚РІРѕРІР°Р» СЃР°РјС‹Р№ РјРѕР»РѕРґРѕР№ С€Р°С…РјР°С‚РёСЃС‚
 SELECT distinct TOURNAMENT
 FROM TOURNAMENTS, CHESS_PLAYERS, STAGES, STAGERESULTS
 WHERE TOURNAMENTS.tournament_id = STAGES.tournament_id
