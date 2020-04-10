@@ -1,4 +1,4 @@
---создать специальную таблицу, в которой фиксируется кто когда логинился
+--СЃРѕР·РґР°С‚СЊ СЃРїРµС†РёР°Р»СЊРЅСѓСЋ С‚Р°Р±Р»РёС†Сѓ, РІ РєРѕС‚РѕСЂРѕР№ С„РёРєСЃРёСЂСѓРµС‚СЃСЏ РєС‚Рѕ РєРѕРіРґР° Р»РѕРіРёРЅРёР»СЃСЏ
 IF OBJECT_ID (N'login_data', N'TABLE') IS NOT NULL 
 DROP TABLE login_data;
 
@@ -7,7 +7,6 @@ CREATE TABLE login_data
 user_login VARCHAR(50),
 logon_date DATETIME
 );
-
 
 CREATE TRIGGER trigger3
 ON ALL SERVER WITH EXECUTE AS 'sa'
