@@ -1,9 +1,9 @@
---ñòðàíà, ãîä, øàõìàòèñò, çâàíèå, ìåñòî (äëÿ ïðèçåðîâ)
+--ÑÑ‚Ñ€Ð°Ð½Ð°, Ð³Ð¾Ð´, ÑˆÐ°Ñ…Ð¼Ð°Ñ‚Ð¸ÑÑ‚, Ð·Ð²Ð°Ð½Ð¸Ðµ, Ð¼ÐµÑÑ‚Ð¾ (Ð´Ð»Ñ Ð¿Ñ€Ð¸Ð·ÐµÑ€Ð¾Ð²)
 IF (object_id('view4', 'V') IS NOT NULL) DROP VIEW view4
 GO
 
-CREATE VIEW view4(ñòðàíà,ãîä,ôàìèëèÿ,èìÿ,çâàíèå,ïîçèöèÿ) AS
-SELECT  COUNTRIES.country, YEAR(TOURNAMENTS.ending_date), CHESS_PLAYERS.surname, CHESS_PLAYERS.name, t2.çâàíèå, position
+CREATE VIEW view4(ÑÑ‚Ñ€Ð°Ð½Ð°,Ð³Ð¾Ð´,Ñ„Ð°Ð¼Ð¸Ð»Ð¸Ñ,Ð¸Ð¼Ñ,Ð·Ð²Ð°Ð½Ð¸Ðµ,Ð¿Ð¾Ð·Ð¸Ñ†Ð¸Ñ) AS
+SELECT  COUNTRIES.country, YEAR(TOURNAMENTS.ending_date), CHESS_PLAYERS.surname, CHESS_PLAYERS.name, t2.Ð·Ð²Ð°Ð½Ð¸Ðµ, position
 FROM CHESS_PLAYERS
 INNER JOIN STAGERESULTS
 ON CHESS_PLAYERS.player_id = STAGERESULTS.player_id 
@@ -13,17 +13,17 @@ INNER join TOURNAMENTS
 ON STAGES.tournament_id = TOURNAMENTS.tournament_id
 INNER JOIN COUNTRIES
 ON TOURNAMENTS.country_id = COUNTRIES.country_id
-INNER JOIN (SELECT CHESS_PLAYERS.player_id player_id, 'çâàíèå' =
+INNER JOIN (SELECT CHESS_PLAYERS.player_id player_id, 'Ð·Ð²Ð°Ð½Ð¸Ðµ' =
 		        CASE
-		           WHEN t1.rnow >= 2500 THEN 'ìåæäóíàðîäíûé ãðîññìåéñòåð'
-		           WHEN t1.rnow >= 2400 AND t1.rnow < 2500 THEN 'ìåæäóíàðîäíûé ìàñòåð'
-		           WHEN t1.rnow >= 2200 AND t1.rnow < 2400 THEN 'íàöèîíàëüíûé ìàñòåð'
-		           WHEN t1.rnow >= 2000 AND t1.rnow < 2200 THEN 'êàíäèäàò â ìàñòåðà'
-		           WHEN t1.rnow >= 1800 AND t1.rnow < 2000 THEN 'ïåðâûé ðàçðÿä'
-		           WHEN t1.rnow >= 1600 AND t1.rnow < 1800 THEN 'âòîðîé ðàçðÿä'
-		   		   WHEN t1.rnow >= 1400 AND t1.rnow < 1600 THEN 'òðåòèé ðàçðÿä'
-		           WHEN t1.rnow >= 1000 AND t1.rnow < 1400 THEN '÷åòâåðòûé ðàçðÿä'
-		           ELSE 'íîâè÷îê'  
+		           WHEN t1.rnow >= 2500 THEN 'Ð¼ÐµÐ¶Ð´ÑƒÐ½Ð°Ñ€Ð¾Ð´Ð½Ñ‹Ð¹ Ð³Ñ€Ð¾ÑÑÐ¼ÐµÐ¹ÑÑ‚ÐµÑ€'
+		           WHEN t1.rnow >= 2400 AND t1.rnow < 2500 THEN 'Ð¼ÐµÐ¶Ð´ÑƒÐ½Ð°Ñ€Ð¾Ð´Ð½Ñ‹Ð¹ Ð¼Ð°ÑÑ‚ÐµÑ€'
+		           WHEN t1.rnow >= 2200 AND t1.rnow < 2400 THEN 'Ð½Ð°Ñ†Ð¸Ð¾Ð½Ð°Ð»ÑŒÐ½Ñ‹Ð¹ Ð¼Ð°ÑÑ‚ÐµÑ€'
+		           WHEN t1.rnow >= 2000 AND t1.rnow < 2200 THEN 'ÐºÐ°Ð½Ð´Ð¸Ð´Ð°Ñ‚ Ð² Ð¼Ð°ÑÑ‚ÐµÑ€Ð°'
+		           WHEN t1.rnow >= 1800 AND t1.rnow < 2000 THEN 'Ð¿ÐµÑ€Ð²Ñ‹Ð¹ Ñ€Ð°Ð·Ñ€ÑÐ´'
+		           WHEN t1.rnow >= 1600 AND t1.rnow < 1800 THEN 'Ð²Ñ‚Ð¾Ñ€Ð¾Ð¹ Ñ€Ð°Ð·Ñ€ÑÐ´'
+		   		   WHEN t1.rnow >= 1400 AND t1.rnow < 1600 THEN 'Ñ‚Ñ€ÐµÑ‚Ð¸Ð¹ Ñ€Ð°Ð·Ñ€ÑÐ´'
+		           WHEN t1.rnow >= 1000 AND t1.rnow < 1400 THEN 'Ñ‡ÐµÑ‚Ð²ÐµÑ€Ñ‚Ñ‹Ð¹ Ñ€Ð°Ð·Ñ€ÑÐ´'
+		           ELSE 'Ð½Ð¾Ð²Ð¸Ñ‡Ð¾Ðº'  
 		        END  
 		   FROM CHESS_PLAYERS
 		   LEFT OUTER JOIN (SELECT CHESS_PLAYERS.player_id player_id, ISNULL(rating,1100) rnow
@@ -42,4 +42,4 @@ AND stage_number in (select max(stage_number) from STAGES
 GO
 
 SELECT * FROM view4
-ORDER BY view4.ôàìèëèÿ
+ORDER BY view4.Ñ„Ð°Ð¼Ð¸Ð»Ð¸Ñ
