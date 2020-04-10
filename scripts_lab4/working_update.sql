@@ -1,4 +1,4 @@
---Повысить рейтинг всех Российских шахматистов на 50, если они хоть где-то заняли первое место
+--РїРѕРІС‹СЃРёС‚СЊ СЂРµР№С‚РёРЅРі РІСЃРµС… Р РѕСЃСЃРёР№СЃРєРёС… С€Р°С…РјР°С‚РёСЃС‚РѕРІ РЅР° 50, РµСЃР»Рё РѕРЅРё С…РѕС‚СЊ РіРґРµ-С‚Рѕ Р·Р°РЅСЏР»Рё РїРµСЂРІРѕРµ РјРµСЃС‚Рѕ
 UPDATE RATING
 	SET rating = rating + 50
     WHERE player_id in (SELECT DISTINCT CHESS_PLAYERS.player_id
@@ -6,4 +6,4 @@ UPDATE RATING
                         WHERE CHESS_PLAYERS.player_id = STAGERESULTS.player_id
                         and position = '1'
                         and CHESS_PLAYERS.country_id = COUNTRIES.country_id
-                        and country = 'Россия')
+                        and country = 'Р РѕСЃСЃРёСЏ')
