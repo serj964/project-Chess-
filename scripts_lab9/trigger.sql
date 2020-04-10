@@ -1,12 +1,12 @@
 IF OBJECT_ID ('trigger1', 'TR') IS NOT NULL
    DROP TRIGGER trigger1;
 GO
---ïðè çàíåñåíèè çàíÿòîãî øàõìàòèñòîì ìåñòà ðåéòèíã øàõìàòèñòà, çàíÿâøåãî ìåñòî íå íèæå 3-ãî óâåëè÷èâàåòñÿ íà âåëè÷èíó: ( 4 - ìåñòî ) * êâàëèôèêàöèîííûé óðîâåíü òóðíèðà
+--Ð¿Ñ€Ð¸ Ð·Ð°Ð½ÐµÑÐµÐ½Ð¸Ð¸ Ð·Ð°Ð½ÑÑ‚Ð¾Ð³Ð¾ ÑˆÐ°Ñ…Ð¼Ð°Ñ‚Ð¸ÑÑ‚Ð¾Ð¼ Ð¼ÐµÑÑ‚Ð° Ñ€ÐµÐ¹Ñ‚Ð¸Ð½Ð³ ÑˆÐ°Ñ…Ð¼Ð°Ñ‚Ð¸ÑÑ‚Ð°, Ð·Ð°Ð½ÑÐ²ÑˆÐµÐ³Ð¾ Ð¼ÐµÑÑ‚Ð¾ Ð½Ðµ Ð½Ð¸Ð¶Ðµ 3-Ð³Ð¾ ÑƒÐ²ÐµÐ»Ð¸Ñ‡Ð¸Ð²Ð°ÐµÑ‚ÑÑ Ð½Ð° Ð²ÐµÐ»Ð¸Ñ‡Ð¸Ð½Ñƒ: ( 4 - Ð¼ÐµÑÑ‚Ð¾ ) * ÐºÐ²Ð°Ð»Ð¸Ñ„Ð¸ÐºÐ°Ñ†Ð¸Ð¾Ð½Ð½Ñ‹Ð¹ ÑƒÑ€Ð¾Ð²ÐµÐ½ÑŒ Ñ‚ÑƒÑ€Ð½Ð¸Ñ€Ð°
 CREATE TRIGGER trigger1 ON dbo.STAGERESULTS AFTER INSERT
 AS
 BEGIN
 INSERT INTO dbo.RATING
-SELECT DISTINCT CP.player_id, rlast + (4 - INS.position) * t1.[êâ. óðîâåíü], GETDATE()
+SELECT DISTINCT CP.player_id, rlast + (4 - INS.position) * t1.[ÐºÐ². ÑƒÑ€Ð¾Ð²ÐµÐ½ÑŒ], GETDATE()
 FROM CHESS_PLAYERS AS CP
 LEFT OUTER JOIN RATING AS RT
 ON CP.player_id = RT.player_id
@@ -18,12 +18,12 @@ LEFT OUTER JOIN STAGES AS S
 ON ST.stage_id = S.stage_id
 LEFT OUTER JOIN TOURNAMENTS AS TT
 ON S.tournament_id = TT.tournament_id
-LEFT OUTER JOIN (SELECT T.tournament_id, 'êâ. óðîâåíü' =
+LEFT OUTER JOIN (SELECT T.tournament_id, 'ÐºÐ². ÑƒÑ€Ð¾Ð²ÐµÐ½ÑŒ' =
 	    CASE
-	       WHEN  T.tournament = 'Êóáîê ïëàíåòû 1975' THEN 4
-	       WHEN  T.tournament IN ('Òóðíèð ÷åìïèîíîâ 2018', 'Òóðíèð ÷åìïèîíîâ 2016', 'Òóðíèð ÷åìïèîíîâ 2014') THEN 3
-	       WHEN  T.tournament IN ('Ãðàí-ïðè Ìîñêâà', 'Ãðàí-ïðè Òîðîíòî', 'Ãðàí-ïðè Ìàí÷åñòåð') THEN 2
-	       WHEN  T.tournament = 'Ñàìûé êðóòîé òóðíèð íà äèêîì çàïàäå' THEN 5
+	       WHEN  T.tournament = 'ÐšÑƒÐ±Ð¾Ðº Ð¿Ð»Ð°Ð½ÐµÑ‚Ñ‹ 1975' THEN 4
+	       WHEN  T.tournament IN ('Ð¢ÑƒÑ€Ð½Ð¸Ñ€ Ñ‡ÐµÐ¼Ð¿Ð¸Ð¾Ð½Ð¾Ð² 2018', 'Ð¢ÑƒÑ€Ð½Ð¸Ñ€ Ñ‡ÐµÐ¼Ð¿Ð¸Ð¾Ð½Ð¾Ð² 2016', 'Ð¢ÑƒÑ€Ð½Ð¸Ñ€ Ñ‡ÐµÐ¼Ð¿Ð¸Ð¾Ð½Ð¾Ð² 2014') THEN 3
+	       WHEN  T.tournament IN ('Ð“Ñ€Ð°Ð½-Ð¿Ñ€Ð¸ ÐœÐ¾ÑÐºÐ²Ð°', 'Ð“Ñ€Ð°Ð½-Ð¿Ñ€Ð¸ Ð¢Ð¾Ñ€Ð¾Ð½Ñ‚Ð¾', 'Ð“Ñ€Ð°Ð½-Ð¿Ñ€Ð¸ ÐœÐ°Ð½Ñ‡ÐµÑÑ‚ÐµÑ€') THEN 2
+	       WHEN  T.tournament = 'Ð¡Ð°Ð¼Ñ‹Ð¹ ÐºÑ€ÑƒÑ‚Ð¾Ð¹ Ñ‚ÑƒÑ€Ð½Ð¸Ñ€ Ð½Ð° Ð´Ð¸ÐºÐ¾Ð¼ Ð·Ð°Ð¿Ð°Ð´Ðµ' THEN 5
 	       ELSE 1  
 	    END  
 	FROM TOURNAMENTS AS T) t1
@@ -54,7 +54,7 @@ END
 IF OBJECT_ID ('trigger2', 'TR') IS NOT NULL
    DROP TRIGGER trigger2;
 GO
---ïðè çàíåñåíèè çàíÿòîãî øàõìàòèñòîì ìåñòà ðåéòèíã øàõìàòèñòà ðåéòèíã øàõìàòèñòà èç ïåðâîé äåñÿòêè è çàíÿâøåãî ìåñòî íèæå äâàäöàòîãî ïîíèæàåòñÿ íà âåëè÷èíó: 0,1 * çàíÿòîå ìåñòî.
+--Ð¿Ñ€Ð¸ Ð·Ð°Ð½ÐµÑÐµÐ½Ð¸Ð¸ Ð·Ð°Ð½ÑÑ‚Ð¾Ð³Ð¾ ÑˆÐ°Ñ…Ð¼Ð°Ñ‚Ð¸ÑÑ‚Ð¾Ð¼ Ð¼ÐµÑÑ‚Ð° Ñ€ÐµÐ¹Ñ‚Ð¸Ð½Ð³ ÑˆÐ°Ñ…Ð¼Ð°Ñ‚Ð¸ÑÑ‚Ð° Ñ€ÐµÐ¹Ñ‚Ð¸Ð½Ð³ ÑˆÐ°Ñ…Ð¼Ð°Ñ‚Ð¸ÑÑ‚Ð° Ð¸Ð· Ð¿ÐµÑ€Ð²Ð¾Ð¹ Ð´ÐµÑÑÑ‚ÐºÐ¸ Ð¸ Ð·Ð°Ð½ÑÐ²ÑˆÐµÐ³Ð¾ Ð¼ÐµÑÑ‚Ð¾ Ð½Ð¸Ð¶Ðµ Ð´Ð²Ð°Ð´Ñ†Ð°Ñ‚Ð¾Ð³Ð¾ Ð¿Ð¾Ð½Ð¸Ð¶Ð°ÐµÑ‚ÑÑ Ð½Ð° Ð²ÐµÐ»Ð¸Ñ‡Ð¸Ð½Ñƒ: 0,1 * Ð·Ð°Ð½ÑÑ‚Ð¾Ðµ Ð¼ÐµÑÑ‚Ð¾.
 CREATE TRIGGER trigger2 ON dbo.STAGERESULTS AFTER INSERT
 AS	
 BEGIN 
@@ -79,7 +79,7 @@ INNER JOIN (SELECT TOP(10) CHESS_PLAYERS.player_id, RATING.rating AS 'rlastmax',
 ORDER BY RATING.rating DESC) t4
 ON CP.player_id = t4.player_id
 WHERE INS.position NOT IN (SELECT inserted.position from inserted
-					        WHERE inserted.position = 'èãðîê ïåðåø¸ë â ñëåäóþùèé òóð')
+					        WHERE inserted.position = 'Ð¸Ð³Ñ€Ð¾Ðº Ð¿ÐµÑ€ÐµÑˆÑ‘Ð» Ð² ÑÐ»ÐµÐ´ÑƒÑŽÑ‰Ð¸Ð¹ Ñ‚ÑƒÑ€')
 AND INS.position > 20
 AND RT.change_date = t4.lastest_date
 AND ST.stage_id = INS.stage_id
