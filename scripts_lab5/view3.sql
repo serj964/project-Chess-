@@ -1,9 +1,9 @@
---шахматист, рейтинг, статистика по всем проводившимся турнирам с 2015, изменение рейтинга за год
+--С€Р°С…РјР°С‚РёСЃС‚, СЂРµР№С‚РёРЅРі, СЃС‚Р°С‚РёСЃС‚РёРєР° РїРѕ РІСЃРµРј РїСЂРѕРІРѕРґРёРІС€РёРјСЃСЏ С‚СѓСЂРЅРёСЂР°Рј СЃ 2015, РёР·РјРµРЅРµРЅРёРµ СЂРµР№С‚РёРЅРіР° Р·Р° РіРѕРґ
 IF (object_id('view3', 'V') IS NOT NULL) DROP VIEW view3
 GO
 
 CREATE VIEW view3 AS
-SELECT CHESS_PLAYERS.surname AS 'фамилия', t2.rnow AS 'рейтинг', COUNT(position) AS 'кол-во побед в турнирах с 2015', t2.rnow-t6.r2015 AS 'изменение рейтинга с 2015' FROM CHESS_PLAYERS
+SELECT CHESS_PLAYERS.surname AS 'С„Р°РјРёР»РёСЏ', t2.rnow AS 'СЂРµР№С‚РёРЅРі', COUNT(position) AS 'РєРѕР»-РІРѕ РїРѕР±РµРґ РІ С‚СѓСЂРЅРёСЂР°С… СЃ 2015', t2.rnow-t6.r2015 AS 'РёР·РјРµРЅРµРЅРёРµ СЂРµР№С‚РёРЅРіР° СЃ 2015' FROM CHESS_PLAYERS
 LEFT OUTER JOIN (SELECT CHESS_PLAYERS.player_id player_id, position
                  FROM STAGERESULTS, STAGES, CHESS_PLAYERS, TOURNAMENTS
                  WHERE CHESS_PLAYERS.player_id = STAGERESULTS.player_id
