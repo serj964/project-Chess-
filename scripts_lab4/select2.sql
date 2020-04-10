@@ -1,5 +1,5 @@
---вывести сколько игр шахматист сыграл за белых, и сколько из них выиграл
-select surname as 'фамилия', name as 'имя', count(chess_players.player_id) as 'сумма игр, сыгранных белыми', RATING as 'рейтинг', count(PLAYER_GAME.points) as 'число выигранных игр'
+--РІС‹РІРµСЃС‚Рё СЃРєРѕР»СЊРєРѕ РёРіСЂ С€Р°С…РјР°С‚РёСЃС‚ СЃС‹РіСЂР°Р» Р·Р° Р±РµР»С‹С…, Рё СЃРєРѕР»СЊРєРѕ РёР· РЅРёС… РІС‹РёРіСЂР°Р»
+select surname as 'С„Р°РјРёР»РёСЏ', name as 'РёРјСЏ', count(chess_players.player_id) as 'СЃСѓРјРјР° РёРіСЂ, СЃС‹РіСЂР°РЅРЅС‹С… Р±РµР»С‹РјРё', RATING as 'СЂРµР№С‚РёРЅРі', count(PLAYER_GAME.points) as 'С‡РёСЃР»Рѕ РІС‹РёРіСЂР°РЅРЅС‹С… РёРіСЂ'
 from PLAYER_GAME, CHESS_PLAYERS INNER JOIN RATING ON CHESS_PLAYERS.player_id=RATING.player_id
 where CHESS_PLAYERS.player_id=PLAYER_GAME.player_id
 and CHESS_PLAYERS.player_id=RATING.player_id
